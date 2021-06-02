@@ -52,10 +52,10 @@
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/perak_mentah_textInputLayout2" />
+                    app:layout_constraintTop_toBottomOf="@+id/perak_mentah_textInputLayout" />
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/perak_mentah_textInputLayout2"
+                    android:id="@+id/perak_mentah_textInputLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
