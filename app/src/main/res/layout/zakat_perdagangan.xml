@@ -16,6 +16,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
@@ -24,12 +34,11 @@
                 android:fontFamily="@font/sriracha"
                 android:text="Piutang yang dapat cair"
                 android:textAllCaps="true"
-                android:textColor="#000000"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout11" />
+                app:layout_constraintTop_toBottomOf="@+id/keuntungan_textInputLayout" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -39,12 +48,11 @@
                 android:fontFamily="@font/sriracha"
                 android:text="kerugian"
                 android:textAllCaps="true"
-                android:textColor="#000000"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout13" />
+                app:layout_constraintTop_toBottomOf="@+id/hutang_textInputLayout" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -54,12 +62,11 @@
                 android:fontFamily="@font/sriracha"
                 android:text="hutang"
                 android:textAllCaps="true"
-                android:textColor="#000000"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout14" />
+                app:layout_constraintTop_toBottomOf="@+id/piutang_textInputLayout" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -69,15 +76,14 @@
                 android:fontFamily="@font/sriracha"
                 android:text="Keuntungan"
                 android:textAllCaps="true"
-                android:textColor="#000000"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout12" />
+                app:layout_constraintTop_toBottomOf="@+id/modal_textInputLayout" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/hitung_perdangangan_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -88,7 +94,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
+                app:layout_constraintTop_toBottomOf="@+id/kerugian_textInputLayout" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -98,7 +104,6 @@
                 android:fontFamily="@font/sriracha"
                 android:text="Modal"
                 android:textAllCaps="true"
-                android:textColor="#000000"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -106,7 +111,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout12"
+                android:id="@+id/modal_textInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="32dp"
@@ -122,7 +127,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout11"
+                android:id="@+id/keuntungan_textInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -138,18 +143,8 @@
                     android:hint="Rp." />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
-
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout14"
+                android:id="@+id/piutang_textInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="32dp"
@@ -165,7 +160,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout13"
+                android:id="@+id/hutang_textInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -182,7 +177,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout5"
+                android:id="@+id/kerugian_textInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
