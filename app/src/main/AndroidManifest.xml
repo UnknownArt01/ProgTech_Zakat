@@ -15,6 +15,7 @@
         <activity android:name=".zakat_maal_umum" />
         <activity android:name=".zakat_perak" />
         <activity android:name=".zakat_emas" />
+
         <activity android:name=".zakat_perdagangan" />
         <activity android:name=".SignUp" />
         <activity android:name=".Login" />
