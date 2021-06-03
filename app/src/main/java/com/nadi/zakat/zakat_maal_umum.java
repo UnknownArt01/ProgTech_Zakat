@@ -25,9 +25,7 @@ public class zakat_maal_umum extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.zakat_maal_umum);
 
-        view_maal();
-        harta_maal_umum_textInputLayout.getEditText().addTextChangedListener(maalWathcer);
-        listener_maal();
+       view_maal();
     }
     private void view_maal(){
         harta_maal_umum_textInputLayout = findViewById(R.id.harta_maal_umum_textInputLayout);
