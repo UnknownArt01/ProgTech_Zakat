@@ -16,6 +16,10 @@ import model.maal;
 public class Maal_RV_Adapter extends RecyclerView.Adapter<Maal_RV_Adapter.MaalViewHolder>{
     private ArrayList<maal> zakat_maal;
 
+    public Maal_RV_Adapter(ArrayList<maal> zakat_maal) {
+        this.zakat_maal = zakat_maal;
+    }
+
     @NonNull
     @Override
     public MaalViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
