@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9AE9F3"
+    tools:context=".tampilanawal">
+
+    <android.widget.Button
+        android:id="@+id/buttonhitprof"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:backgroundTint="#E91E63"
+        android:text="Hitung Zakat Profesi"
+        android:textColor="#F6F3F3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.widget.Button
+        android:id="@+id/buttonhitemu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="73dp"
+        android:backgroundTint="#9C27B0"
+        android:text="Hitung Zakat Barang Temuan"
+        android:textColor="#FAF6F6"
+        app:layout_constraintEnd_toEndOf="@+id/buttonhitprof"
+        app:layout_constraintStart_toStartOf="@+id/buttonhitprof"
+        app:layout_constraintTop_toBottomOf="@+id/buttonhitprof" />
+
+    <android.widget.Button
+        android:id="@+id/buttonhitab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="74dp"
+        android:backgroundTint="#FF9800"
+        android:text="Hitung Zakat tabungan"
+        android:textColor="#FAF7F7"
+        app:layout_constraintEnd_toEndOf="@+id/buttonhitemu"
+        app:layout_constraintStart_toStartOf="@+id/buttonhitemu"
+        app:layout_constraintTop_toBottomOf="@+id/buttonhitemu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
