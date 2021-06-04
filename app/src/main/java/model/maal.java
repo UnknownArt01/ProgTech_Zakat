@@ -49,6 +49,7 @@ public class maal implements Parcelable {
         this.jumlah_mall = 0;
     }
 
+
     @Override
     public int describeContents() {
         return 0;

@@ -31,7 +31,9 @@ public class Maal_RV_Adapter extends RecyclerView.Adapter<Maal_RV_Adapter.MaalVi
     @Override
     public void onBindViewHolder(@NonNull Maal_RV_Adapter.MaalViewHolder holder, int position) {
         holder.Harta_EditText.setText(zakat_maal.get(position).getHarta());
-        holder.jumlah_maal_TextView.setText(zakat_maal.get(position).getJumlah_mall());
+
+        int hasil = (int) (zakat_maal.get(position).getHarta() * (0.025));
+        holder.jumlah_maal_TextView.setText(String.valueOf(hasil));
     }
 
     @Override
