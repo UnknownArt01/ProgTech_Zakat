@@ -98,7 +98,7 @@ public class Login extends AppCompatActivity {
                         if (check.getEmail().equalsIgnoreCase(email) && check.getPassword().equals(password)){
                             lihat = true;
                             main_login_button.setEnabled(true);
-                            Intent intent = new Intent(getBaseContext(), Maal_RecycleView.class);
+                            Intent intent = new Intent(getBaseContext(), Maal_RecyclerView.class);
                             intent.putExtra("user", check);
                             intent.putExtra("index", i);
                             finish();

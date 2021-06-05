@@ -1,5 +1,6 @@
 package com.nadi.zakat;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,12 +35,28 @@ public class Emas_RecyclerView extends AppCompatActivity {
         clickListener();
     }
 
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable  Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 5587){
+            if (resultCode == 300){
+                Emas emasBaru = data.getParcelableExtra("emasBaru");
+                dataEmas.add(emasBaru);
+                adapter.notifyDataSetChanged();
+
+            }
+        }
+    }
+
     private void clickListener() {
         emas_floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), zakat_emas.class);
-                startActivity(intent);
+                startActivityForResult(intent, 5587);
             }
         });
     }
