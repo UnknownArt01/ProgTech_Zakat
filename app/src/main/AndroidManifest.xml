@@ -11,16 +11,7 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Zakat">
-        <activity android:name=".Emas_RecyclerView">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".MENU" />
-        <activity android:name=".Maal_RecycleView" />
-        <activity android:name=".zakat_pertanian" />
+        <activity android:name=".zakat_pertanian"></activity>
         <activity android:name=".zakat_maal_umum" />
         <activity android:name=".zakat_perak" />
         <activity android:name=".zakat_emas" />
@@ -28,7 +19,11 @@
         <activity android:name=".SignUp" />
         <activity android:name=".Login" />
         <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
