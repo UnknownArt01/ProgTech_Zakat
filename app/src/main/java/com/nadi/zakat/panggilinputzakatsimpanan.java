@@ -35,7 +35,7 @@ public class panggilinputzakatsimpanan extends RecyclerView.Adapter<panggilinput
         holder.card_jmlsaldo.setText(String.valueOf(inputanZakatsimpanan.get(position).getJsaldo()));
         holder.card_bunga.setText(String.valueOf(inputanZakatsimpanan.get(position).getBungaa()));
 
-        int  hasil = (int)(( inputanZakatsimpanan.get(position).getJsaldo() - inputanZakatsimpanan.get(position).getBungaa())*0.25 );
+        int  hasil = (int)((inputanZakatsimpanan.get(position).getJsaldo() + (inputanZakatsimpanan.get(position).getJsaldo() * inputanZakatsimpanan.get(position).getBungaa()))*0.025 );
         holder.card_hasilZakattabungan.setText(String.valueOf(hasil));
 
 

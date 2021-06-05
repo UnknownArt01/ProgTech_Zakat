@@ -16,7 +16,8 @@ public class hitungzakatsimpanan extends AppCompatActivity {
 
     private TextInputLayout textInputzakatsaldo, textInputbunga;
     private Button button_simpanan;
-    int saldoakhir, bunga, hasilll;
+    int saldoakhir, hasilll;
+    double bunga;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,7 @@ public class hitungzakatsimpanan extends AppCompatActivity {
             public void onClick(View v) {
 
                 saldoakhir = Integer.parseInt(textInputzakatsaldo.getEditText().getText().toString().trim());
-                bunga = Integer.parseInt(textInputbunga.getEditText().getText().toString().trim());
+                bunga = Double.parseDouble(textInputbunga.getEditText().getText().toString().trim());
 
                 InputanZakatSimpanan temppp = new InputanZakatSimpanan(saldoakhir, bunga, hasilll);
                 Intent intensss = new Intent();

@@ -6,7 +6,8 @@ import android.os.Parcelable;
 public class InputanZakatSimpanan implements Parcelable{
 
     private String image_pathhh;
-    private int jsaldo,bungaa, hasilll;
+    private int jsaldo, hasilll;
+    private double bungaa;
 
     public InputanZakatSimpanan() {
         this.image_pathhh = "";
@@ -16,7 +17,7 @@ public class InputanZakatSimpanan implements Parcelable{
 
     }
 
-    public InputanZakatSimpanan(int jsaldo, int bungaa, int hasilll) {
+    public InputanZakatSimpanan(int jsaldo, double bungaa, int hasilll) {
         this.image_pathhh = "";
         this.jsaldo = jsaldo;
         this.bungaa = bungaa;
@@ -25,7 +26,7 @@ public class InputanZakatSimpanan implements Parcelable{
     }
 
 
-    public InputanZakatSimpanan(String image_pathhh, int jsaldo, int bungaa, int hasilll) {
+    public InputanZakatSimpanan(String image_pathhh, int jsaldo, double bungaa, int hasilll) {
         this.image_pathhh = image_pathhh;
         this.jsaldo = jsaldo;
         this.bungaa = bungaa;
@@ -50,11 +51,12 @@ public class InputanZakatSimpanan implements Parcelable{
         this.jsaldo = jsaldo;
     }
 
-    public int getBungaa() {
+    public double getBungaa() {
         return bungaa;
     }
 
-    public void setBungaa(int bungaa) {
+    public void setBungaa(double bungaa) {
+
         this.bungaa = bungaa;
     }
 
@@ -73,7 +75,7 @@ public class InputanZakatSimpanan implements Parcelable{
     protected InputanZakatSimpanan(Parcel in) {
         image_pathhh = in.readString();
         jsaldo = in.readInt();
-        bungaa = in.readInt();
+        bungaa = in.readDouble();
         hasilll = in.readInt();
     }
 
@@ -98,7 +100,7 @@ public class InputanZakatSimpanan implements Parcelable{
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(image_pathhh);
         dest.writeInt(jsaldo);
-        dest.writeInt(bungaa);
+        dest.writeDouble(bungaa);
         dest.writeInt(hasilll);
 
     }
