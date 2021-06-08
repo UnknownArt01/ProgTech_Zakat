@@ -27,7 +27,7 @@ public class MENU extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intentprof = new Intent(getBaseContext(), Emas_RecyclerView.class);
                 startActivity(intentprof);
-                finish();
+
             }
         });
         perak_imageButton.setOnClickListener(new View.OnClickListener() {
@@ -35,7 +35,7 @@ public class MENU extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intentprof = new Intent(getBaseContext(), Perak_RecyclerView.class);
                 startActivity(intentprof);
-                finish();
+
             }
         });
         perdagangan_imageButton.setOnClickListener(new View.OnClickListener() {
@@ -43,7 +43,7 @@ public class MENU extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intentprof = new Intent(getBaseContext(), Perdagangan_RecyclerView.class);
                 startActivity(intentprof);
-                finish();
+
             }
         });
         maal_imageButton.setOnClickListener(new View.OnClickListener() {
@@ -51,7 +51,7 @@ public class MENU extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intentprof = new Intent(getBaseContext(), Maal_RecyclerView.class);
                 startActivity(intentprof);
-                finish();
+
             }
         });
         profesi_imageButton.setOnClickListener(new View.OnClickListener() {
@@ -59,7 +59,7 @@ public class MENU extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intentprof = new Intent(getBaseContext(), listinputzakatprofesi.class);
                 startActivity(intentprof);
-                finish();
+
             }
         });
 
@@ -68,7 +68,7 @@ public class MENU extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intentemuan = new Intent(getBaseContext(), listinputzakatrikaz.class);
                 startActivity(intentemuan);
-                finish();
+
             }
         });
 
@@ -77,7 +77,7 @@ public class MENU extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intentsimpanan = new Intent(getBaseContext(), listinputzakatsimpanan.class);
                 startActivity(intentsimpanan);
-                finish();
+
             }
         });
     }
