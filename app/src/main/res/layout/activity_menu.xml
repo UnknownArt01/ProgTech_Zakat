@@ -6,4 +6,201 @@
     android:layout_height="match_parent"
     tools:context=".MENU">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-103dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/perak_imageButton"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/perak"
+                android:src="@drawable/stroke"
+                app:layout_constraintBottom_toTopOf="@+id/profesi_imageButton"
+                app:layout_constraintEnd_toStartOf="@+id/maal_imageButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emas_imageButton" />
+
+            <TextView
+                android:id="@+id/textView59"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zakat Barang Temuan"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/temuan_imageButton"
+                app:layout_constraintStart_toStartOf="@+id/temuan_imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/temuan_imageButton" />
+
+            <ImageButton
+                android:id="@+id/maal_imageButton"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
+                android:background="@drawable/money"
+                android:src="@drawable/stroke"
+                app:layout_constraintBottom_toTopOf="@+id/tabungan_imageButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/perak_imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/perdagangan_imageButton" />
+
+            <ImageButton
+                android:id="@+id/profesi_imageButton"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/profesi"
+                app:layout_constraintBottom_toTopOf="@+id/temuan_imageButton"
+                app:layout_constraintEnd_toStartOf="@+id/tabungan_imageButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/perak_imageButton"
+                app:srcCompat="@drawable/stroke" />
+
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zakat Perak"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/perak_imageButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/perak_imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/perak_imageButton" />
+
+            <ImageButton
+                android:id="@+id/emas_imageButton"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/emas"
+                android:src="@drawable/stroke"
+                app:layout_constraintBottom_toTopOf="@+id/perak_imageButton"
+                app:layout_constraintEnd_toStartOf="@+id/perdagangan_imageButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar7" />
+
+            <TextView
+                android:id="@+id/textView50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zakat Emas"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/emas_imageButton"
+                app:layout_constraintStart_toStartOf="@+id/emas_imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/emas_imageButton" />
+
+            <TextView
+                android:id="@+id/textView51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zakat Perdagangan"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/perdagangan_imageButton"
+                app:layout_constraintHorizontal_bias="0.511"
+                app:layout_constraintStart_toStartOf="@+id/perdagangan_imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/perdagangan_imageButton" />
+
+            <ImageButton
+                android:id="@+id/perdagangan_imageButton"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/perdagangan_bulat"
+                android:src="@drawable/stroke"
+                app:layout_constraintBottom_toTopOf="@+id/maal_imageButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/emas_imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar7" />
+
+            <ImageButton
+                android:id="@+id/tabungan_imageButton"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
+                android:background="@drawable/tabungan"
+                app:layout_constraintBottom_toTopOf="@+id/textView59"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/profesi_imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/maal_imageButton"
+                app:srcCompat="@drawable/stroke" />
+
+            <TextView
+                android:id="@+id/textView56"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zakat Maal"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/maal_imageButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/maal_imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/maal_imageButton" />
+
+            <TextView
+                android:id="@+id/textView57"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zakat Profesi"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/profesi_imageButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/profesi_imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/profesi_imageButton" />
+
+            <ImageButton
+                android:id="@+id/temuan_imageButton"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="100dp"
+                android:background="@drawable/temuan"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tabungan_imageButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profesi_imageButton"
+                app:srcCompat="@drawable/stroke" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#00B8D4"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:title="Zakat Counter" />
+
+            <TextView
+                android:id="@+id/textView58"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zakat Tabungan"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/tabungan_imageButton"
+                app:layout_constraintStart_toStartOf="@+id/tabungan_imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/tabungan_imageButton" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
