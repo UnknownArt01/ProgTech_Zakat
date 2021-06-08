@@ -27,6 +27,8 @@ public class Maal_RecyclerView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.maal_recycler_view);
 
+        getSupportActionBar().hide();
+
         initView();
         setupRecyclerView();
         addDummyData();
