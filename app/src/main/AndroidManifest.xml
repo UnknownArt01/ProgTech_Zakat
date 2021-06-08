@@ -11,12 +11,16 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Zakat">
-        <activity android:name=".Maal_RecyclerView">
+        <activity android:name=".Perak_RecyclerView">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Maal_RecyclerView">
+
         </activity>
         <activity android:name=".zakat_pertanian" />
         <activity android:name=".zakat_maal_umum" />
@@ -32,9 +36,7 @@
         <activity android:name=".listinputzakatprofesi" />
         <activity android:name=".listinputzakatrikaz" />
         <activity android:name=".listinputzakatsimpanan" />
-        <activity android:name=".SplashScreen">
-
-        </activity>
+        <activity android:name=".SplashScreen"></activity>
     </application>
 
 </manifest>
