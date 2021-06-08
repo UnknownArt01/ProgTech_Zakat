@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".zakat_emas"
-    android:background="@drawable/background2">
+    android:background="@drawable/background2"
+    tools:context=".zakat_emas">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,15 +15,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00B8D4"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:title="Zakat Emas" />
+
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="176dp"
                 android:layout_height="168dp"
-                android:layout_marginTop="32dp"
                 android:background="@drawable/emas"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/toolbar9" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -113,7 +124,7 @@
                     android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/hitung_emas_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -121,11 +132,21 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
                 android:layout_marginBottom="100dp"
+                android:background="@drawable/round_button"
                 android:text="Hitung"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/harga_emas_textInputLayout" />
+
+            <ImageView
+                android:id="@+id/question_imageView"
+                android:layout_width="66dp"
+                android:layout_height="55dp"
+                app:layout_constraintBottom_toBottomOf="@+id/toolbar9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/ic_menu_help" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

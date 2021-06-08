@@ -26,11 +26,7 @@
         <activity android:name=".SignUp" />
         <activity android:name=".Login" >
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Emas_RecyclerView" />
         <activity android:name=".hitungzakatprofesi" />
@@ -39,7 +35,11 @@
         <activity android:name=".listinputzakatprofesi" />
         <activity android:name=".listinputzakatrikaz" />
         <activity android:name=".listinputzakatsimpanan" />
-        <activity android:name=".SplashScreen" />
+        <activity android:name=".SplashScreen" ><intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
         <activity android:name=".MENU"/>
     </application>
 

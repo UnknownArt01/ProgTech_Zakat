@@ -4,17 +4,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
+import model.Loading;
 import model.Perak;
 
 public class zakat_perak extends AppCompatActivity {
     private TextInputLayout perak_mentah_textInputLayout, harga_perak_textInputLayout;
     private Button hitung_perak_button;
     private int hasil = 0;
+    private Loading loading = new Loading(zakat_perak.this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +38,16 @@ public class zakat_perak extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.putExtra("perakBaru", temp);
                 setResult(500, intent);
-                finish();
+                loading.startLoadingDialog();
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        loading.dismiss();
+                        finish();
+                    }
+                },1000);
+                Toast.makeText(getApplicationContext(), "Zakat Perak Berhasil Dihitung ", Toast.LENGTH_SHORT).show();
             }
         });
     }

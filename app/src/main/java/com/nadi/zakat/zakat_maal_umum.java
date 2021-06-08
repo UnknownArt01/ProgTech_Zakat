@@ -21,6 +21,7 @@ public class zakat_maal_umum extends AppCompatActivity {
     private TextInputLayout harta_maal_umum_textInputLayout;
     private Button hitung_maal_umum_button;
     private int hasil = 0;
+    private Loading loading = new Loading(zakat_maal_umum.this);
 //    Loading loading = new Loading(zakat_maal_umum.this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,16 @@ public class zakat_maal_umum extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.putExtra("maalBaru", temp);
                 setResult(100, intent);
-                finish();
+                loading.startLoadingDialog();
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        loading.dismiss();
+                        finish();
+                    }
+                },1000);
+                Toast.makeText(getApplicationContext(), "Zakat Maal Berhasil Dihitung ", Toast.LENGTH_SHORT).show();
             }
         });
 
