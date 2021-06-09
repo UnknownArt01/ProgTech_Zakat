@@ -23,6 +23,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="1. Mencapai 1 Nisap emas (seharga 85 gram emas)"
         android:textColor="#FBFBFB"
@@ -36,6 +37,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text='2. Pastikan input semua data (bila tidak ada isikan 0 "nol" )'
         android:textColor="#FFFFFF"

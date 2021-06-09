@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="           Riwayat Hitung Zakat Profesi" />
+        app:title="           Riwayat Hitung Zakat Fitrah" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_ft"

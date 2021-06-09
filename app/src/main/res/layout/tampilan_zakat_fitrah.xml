@@ -3,36 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="#FBFBFB">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        app:cardCornerRadius="10dp"
+        android:layout_marginEnd="8dp"
+        app:cardBackgroundColor="#00B8D4"
+        app:cardCornerRadius="50dp"
+        app:cardPreventCornerOverlap="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#009688">
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="66dp"
+                android:layout_width="128dp"
                 android:layout_height="206dp"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="?android:attr/actionModeFindDrawable" />
+                app:srcCompat="@drawable/fitrah" />
 
             <TextView
                 android:id="@+id/textView41"
@@ -48,19 +47,20 @@
 
             <TextView
                 android:id="@+id/textView42"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="Harga Beras dipasaran"
                 android:textColor="#F4F1F1"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="@+id/textView41"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/textView41"
                 app:layout_constraintTop_toBottomOf="@+id/textView41" />
 
             <TextView
                 android:id="@+id/card_hargaberas"
-                android:layout_width="163dp"
+                android:layout_width="0dp"
                 android:layout_height="37dp"
                 app:layout_constraintEnd_toEndOf="@+id/textView42"
                 app:layout_constraintStart_toStartOf="@+id/textView42"
@@ -68,7 +68,7 @@
 
             <TextView
                 android:id="@+id/textView44"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
                 android:text="zakat fitrah yang dikeluarkan"
@@ -80,7 +80,7 @@
 
             <TextView
                 android:id="@+id/card_hasillll"
-                android:layout_width="178dp"
+                android:layout_width="0dp"
                 android:layout_height="39dp"
                 app:layout_constraintEnd_toEndOf="@+id/textView44"
                 app:layout_constraintStart_toStartOf="@+id/textView44"
