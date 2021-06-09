@@ -33,7 +33,8 @@ public class Emas_RV_Adapter extends RecyclerView.Adapter<Emas_RV_Adapter.EmasVi
     public void onBindViewHolder(@NonNull  Emas_RV_Adapter.EmasViewHolder holder, int position) {
         holder.total_emas_textView.setText(String.valueOf(listEmas.get(position).getEmas_mentah()));
         holder.harga_emas_textView.setText(String.valueOf(listEmas.get(position).getEmas_harga()));
-        int bayar = (int) ((listEmas.get(position).getEmas_mentah() - listEmas.get(position).getEmas_pakai())*0.025);
+        int total = (int) ((listEmas.get(position).getEmas_mentah() - listEmas.get(position).getEmas_pakai())*listEmas.get(position).getEmas_harga());
+        int bayar = (int) (total * 0.025);
         holder.zakat_emas_textView.setText(String.valueOf(bayar));
     }
 
