@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".listinputzakatsimpanan">
+    tools:context=".Perak_RecyclerView">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar3"
+        android:id="@+id/toolbar5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#00B8D4"
@@ -16,40 +16,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:maxButtonHeight="56dp"
-        app:title="         Riwayat Hitung Zakat Simpanan"
-        app:titleMargin="4dp" />
+        app:title="Zakat Perak" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview_sm"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:id="@+id/perak_RecyclerView"
+        android:layout_width="409dp"
+        android:layout_height="673dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar3">
-
-    </androidx.recyclerview.widget.RecyclerView>
+        app:layout_constraintTop_toBottomOf="@+id/toolbar5" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton_sm"
+        android:id="@+id/perak_floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="64dp"
         android:clickable="true"
-        app:backgroundTint="#FFC107"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_add" />
-
-    <ImageView
-        android:id="@+id/imageView_backs"
-        android:layout_width="64dp"
-        android:layout_height="56dp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerview_sm"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="?attr/homeAsUpIndicator" />
+        app:srcCompat="@android:drawable/ic_menu_revert" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

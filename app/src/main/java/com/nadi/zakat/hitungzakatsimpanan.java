@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 import com.google.android.material.textfield.TextInputLayout;
 
 import model.InputanZakatSimpanan;
+import model.Loading;
 
 public class hitungzakatsimpanan extends AppCompatActivity {
 
@@ -18,6 +20,7 @@ public class hitungzakatsimpanan extends AppCompatActivity {
     private Button button_simpanan;
     int saldoakhir, hasilll;
     double bunga;
+    private Loading loading = new Loading(hitungzakatsimpanan.this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +43,15 @@ public class hitungzakatsimpanan extends AppCompatActivity {
                 Intent intensss = new Intent();
                 intensss.putExtra("jumlahinputsimpanan", temppp);
                 setResult(80, intensss);
-                finish();
+                loading.startLoadingDialog();
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        loading.dismiss();
+                        finish();
+                    }
+                },1000);
                 Toast.makeText(getApplicationContext(), "Zakat Tabungan Berhasil Dihitung ", Toast.LENGTH_SHORT).show();
             }
         });
