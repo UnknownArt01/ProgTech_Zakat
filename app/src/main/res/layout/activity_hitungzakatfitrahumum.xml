@@ -4,21 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#15CDBC"
+    android:background="@drawable/background2"
     tools:context=".hitungzakatfitrahumum">
 
     <TextView
         android:id="@+id/textView39"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
         android:text="Hitung Zakat Fitrah"
-        android:textColor="#FBFAFA"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <TextView
         android:id="@+id/textView40"
@@ -26,7 +24,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:text="Harga Beras dipasaran"
-        android:textColor="#F8F5F5"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView39"
@@ -47,7 +44,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="harga beras" />
+            android:hint="Rp."
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <android.widget.Button
@@ -55,10 +53,53 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="91dp"
-        android:backgroundTint="#009688"
+        android:background="@drawable/round_button"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:text="Hitung Zakat Fitrah"
         android:textColor="#FAF6F6"
         app:layout_constraintEnd_toEndOf="@+id/textInputhargaberasaatini"
         app:layout_constraintStart_toStartOf="@+id/textInputhargaberasaatini"
         app:layout_constraintTop_toBottomOf="@+id/textInputhargaberasaatini" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="190dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar12"
+        app:srcCompat="@drawable/fitrah" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00B8D4"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Zakat FItrah"
+        app:titleMarginStart="80dp" />
+
+    <ImageView
+        android:id="@+id/back_fitrah_imageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/abc_vector_test" />
+
+    <ImageView
+        android:id="@+id/question_fitrah_imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_help" />
 </androidx.constraintlayout.widget.ConstraintLayout>

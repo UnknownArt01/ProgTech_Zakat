@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class MENU extends AppCompatActivity {
-    private ImageButton emas_imageButton, perdagangan_imageButton, perak_imageButton, maal_imageButton, profesi_imageButton, tabungan_imageButton,temuan_imageButton;
+    private ImageButton fitrah_imageButton, emas_imageButton, perdagangan_imageButton, perak_imageButton, maal_imageButton, profesi_imageButton, tabungan_imageButton,temuan_imageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +80,14 @@ public class MENU extends AppCompatActivity {
 
             }
         });
+        fitrah_imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentsimpanan = new Intent(getBaseContext(), listinputzakatfitrah.class);
+                startActivity(intentsimpanan);
+
+            }
+        });
     }
 
     private void initView() {
@@ -90,5 +98,6 @@ public class MENU extends AppCompatActivity {
         profesi_imageButton = findViewById(R.id.profesi_imageButton);
         tabungan_imageButton = findViewById(R.id.tabungan_imageButton);
         temuan_imageButton = findViewById(R.id.temuan_imageButton);
+        fitrah_imageButton = findViewById(R.id.fitrah_imageButton);
     }
 }

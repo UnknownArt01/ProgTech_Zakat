@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -21,6 +22,7 @@ public class Maal_RecyclerView extends AppCompatActivity {
     private ArrayList<Maal> dataMaal;
     private Maal_RV_Adapter adapter;
     private FloatingActionButton maal_floatingActionButton;
+    private ImageView back_maal_rec_imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +33,7 @@ public class Maal_RecyclerView extends AppCompatActivity {
 
         initView();
         setupRecyclerView();
-        addDummyData();
+
         clickListener();
         
     }
@@ -57,6 +59,14 @@ public class Maal_RecyclerView extends AppCompatActivity {
                 startActivityForResult(intent, 5563);
             }
         });
+        back_maal_rec_imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intback = new Intent(getBaseContext(), MENU.class);
+                startActivity(intback);
+                finish();
+            }
+        });
 
     }
 
@@ -76,5 +86,6 @@ public class Maal_RecyclerView extends AppCompatActivity {
         maal_floatingActionButton = findViewById(R.id.maal_floatingActionButton);
         dataMaal = new ArrayList<Maal>();
         adapter = new Maal_RV_Adapter(dataMaal);
+        back_maal_rec_imageView = findViewById(R.id.back_maal_rec_imageView);
     }
 }

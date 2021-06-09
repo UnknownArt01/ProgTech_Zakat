@@ -18,7 +18,7 @@ import model.Loading;
 
 public class zakat_emas extends AppCompatActivity {
     private TextInputLayout emas_mentah_textInputLayout, emas_pakai_textInputLayout, harga_emas_textInputLayout;
-    private ImageView question_imageView;
+    private ImageView question_imageView, back_emas_imageView;
     private Button hitung_emas_button;
     private int bayar = 1;
     private Loading loading = new Loading(zakat_emas.this);
@@ -64,7 +64,22 @@ public class zakat_emas extends AppCompatActivity {
         question_imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                emas_guide.startLoadingDialog();
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        emas_guide.dismiss();
+                    }
+                },5000);
+            }
+        });
+        back_emas_imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intback = new Intent(getBaseContext(), MENU.class);
+                startActivity(intback);
+                finish();
             }
         });
     }
@@ -75,6 +90,7 @@ public class zakat_emas extends AppCompatActivity {
         harga_emas_textInputLayout = findViewById(R.id.harga_emas_textInputLayout);
         hitung_emas_button = findViewById(R.id.hitung_emas_button);
         question_imageView = findViewById(R.id.question_imageView);
+        back_emas_imageView = findViewById(R.id.back_emas_imageView);
     }
 
 }

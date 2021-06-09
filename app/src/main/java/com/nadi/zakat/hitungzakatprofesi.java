@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -19,6 +20,7 @@ public class hitungzakatprofesi extends AppCompatActivity {
     private TextInputLayout textInputpenghasilan, textInputambah, textInputcicilan;
     private Button button_hit;
     int penghasilan, tambah, cicilan, hasil;
+    private ImageView back_profesi_imageView;
     private Loading loading = new Loading(hitungzakatprofesi.this);
 
 
@@ -33,6 +35,8 @@ public class hitungzakatprofesi extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hitungzakatprofesi);
+
+        getSupportActionBar().hide();
 
 
         initView();
@@ -65,6 +69,14 @@ public class hitungzakatprofesi extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Zakat profesi Berhasil Dihitung ", Toast.LENGTH_SHORT).show();
             }
         });
+        back_profesi_imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intback = new Intent(getBaseContext(), listinputzakatprofesi.class);
+                startActivity(intback);
+                finish();
+            }
+        });
     }
     private void initView() {
 
@@ -72,6 +84,7 @@ public class hitungzakatprofesi extends AppCompatActivity {
         textInputambah = findViewById(R.id.textInputambah);
         textInputcicilan = findViewById(R.id.textInputcicilan);
         button_hit = findViewById(R.id.button_hit);
+        back_profesi_imageView = findViewById(R.id.back_profesi_imageView);
         //  textViewhasil = findViewById(R.id.textViewhasil);
         // card_hasil = findViewById(R.id.card_hasil);
 

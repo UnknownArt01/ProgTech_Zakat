@@ -29,6 +29,8 @@ public class listinputzakatrikaz extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listinputzakatrikaz);
+        getSupportActionBar().hide();
+
         initView();
         setupRecyclerView();
         addDummyData();
