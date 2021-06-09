@@ -63,7 +63,7 @@ public class zakat_maal_umum extends AppCompatActivity {
         back_maal_imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intback = new Intent(getBaseContext(), MENU.class);
+                Intent intback = new Intent(getBaseContext(), Maal_RecyclerView.class);
                 startActivity(intback);
                 finish();
             }

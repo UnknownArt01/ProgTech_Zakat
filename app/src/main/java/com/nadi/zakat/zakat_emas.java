@@ -77,7 +77,7 @@ public class zakat_emas extends AppCompatActivity {
         back_emas_imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intback = new Intent(getBaseContext(), MENU.class);
+                Intent intback = new Intent(getBaseContext(), Emas_RecyclerView.class);
                 startActivity(intback);
                 finish();
             }

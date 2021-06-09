@@ -58,7 +58,7 @@ public class zakat_perak extends AppCompatActivity {
         back_perak_imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intback = new Intent(getBaseContext(), MENU.class);
+                Intent intback = new Intent(getBaseContext(), Perak_RecyclerView.class);
                 startActivity(intback);
                 finish();
             }

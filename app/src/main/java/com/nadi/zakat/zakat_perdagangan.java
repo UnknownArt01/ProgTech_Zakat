@@ -64,7 +64,7 @@ public class zakat_perdagangan extends AppCompatActivity {
         back_perdagangan_imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intback = new Intent(getBaseContext(), MENU.class);
+                Intent intback = new Intent(getBaseContext(), Perdagangan_RecyclerView.class);
                 startActivity(intback);
                 finish();
             }
