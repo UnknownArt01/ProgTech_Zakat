@@ -78,7 +78,7 @@ public class listinputzakatfitrah extends AppCompatActivity {
         imageView_ft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intback = new Intent(getBaseContext(), tampilanawal.class);
+                Intent intback = new Intent(getBaseContext(), MENU.class);
                 startActivity(intback);
                 finish();
             }

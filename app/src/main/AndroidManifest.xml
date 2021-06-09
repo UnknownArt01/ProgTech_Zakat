@@ -11,7 +11,6 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Zakat">
-        <activity android:name=".tampilanawal"></activity>
         <activity android:name=".listinputzakatsimpanan" />
         <activity android:name=".listinputzakatrikaz" />
         <activity android:name=".listinputzakatprofesi" />
