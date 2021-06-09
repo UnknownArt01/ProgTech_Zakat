@@ -12,16 +12,19 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
+import model.Fitrah_Guide;
 import model.InputanZakatProfesi;
 import model.Loading;
+import model.Profesi_Guide;
 
 public class hitungzakatprofesi extends AppCompatActivity {
 
     private TextInputLayout textInputpenghasilan, textInputambah, textInputcicilan;
     private Button button_hit;
     int penghasilan, tambah, cicilan, hasil;
-    private ImageView back_profesi_imageView;
+    private ImageView back_profesi_imageView, question_profesi_imageView;
     private Loading loading = new Loading(hitungzakatprofesi.this);
+    private Profesi_Guide  profesi_guide= new Profesi_Guide(hitungzakatprofesi.this);
 
 
             //https://github.com/UnknownArt01/ProgTech_Zakat/tree/lia
@@ -77,7 +80,21 @@ public class hitungzakatprofesi extends AppCompatActivity {
                 finish();
             }
         });
-    }
+
+     question_profesi_imageView.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            profesi_guide.startLoadingDialog();
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    profesi_guide.dismiss();
+                }
+            },5000);
+        }
+    });
+}
     private void initView() {
 
         textInputpenghasilan = findViewById(R.id.textInputpenghasilan);

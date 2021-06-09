@@ -11,7 +11,7 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Zakat">
-<<<<<<<<< Temporary merge branch 1
+
         <activity android:name=".Perdagangan_RecyclerView">
 
 
@@ -20,18 +20,17 @@
 
         </activity>
         <activity android:name=".Maal_RecyclerView"></activity>
-=========
+
         <activity android:name=".listinputzakatfitrah"></activity>
         <activity android:name=".hitungzakatfitrahumum" />
-        <activity android:name=".tampilanawal" />
+
         <activity android:name=".listinputzakatsimpanan" />
         <activity android:name=".listinputzakatrikaz" />
         <activity android:name=".listinputzakatprofesi" />
         <activity android:name=".hitungzakatrikaz" />
         <activity android:name=".hitungzakatsimpanan" />
         <activity android:name=".hitungzakatprofesi" />
-        <activity android:name=".zakat_pertanian" />
->>>>>>>>> Temporary merge branch 2
+
         <activity android:name=".zakat_maal_umum" />
         <activity android:name=".zakat_perak" />
         <activity android:name=".zakat_emas" />
@@ -42,12 +41,7 @@
 
         </activity>
         <activity android:name=".Emas_RecyclerView" />
-        <activity android:name=".hitungzakatprofesi" />
-        <activity android:name=".hitungzakatsimpanan" />
-        <activity android:name=".hitungzakatrikaz" />
-        <activity android:name=".listinputzakatprofesi" />
-        <activity android:name=".listinputzakatrikaz" />
-        <activity android:name=".listinputzakatsimpanan" />
+
         <activity android:name=".SplashScreen" ><intent-filter>
             <action android:name="android.intent.action.MAIN" />
 

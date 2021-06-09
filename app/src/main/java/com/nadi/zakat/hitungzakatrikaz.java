@@ -14,14 +14,17 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import model.InputanZakatTemuan;
 import model.Loading;
+import model.Profesi_Guide;
+import model.Rikaz_Guide;
 
 public class hitungzakatrikaz extends AppCompatActivity {
 
     private TextInputLayout textInputhargabarangtemuan;
     private Button button_hitung_Rikaz;
     int hargabarangtemuan,hasill;
-    private ImageView back_temuan_imageView;
+    private ImageView back_temuan_imageView, question_rikaz_imageView;
     private Loading loading = new Loading(hitungzakatrikaz.this);
+    private Rikaz_Guide rikaz_guide= new Rikaz_Guide(hitungzakatrikaz.this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +66,20 @@ public class hitungzakatrikaz extends AppCompatActivity {
                 Intent intback = new Intent(getBaseContext(), listinputzakatrikaz.class);
                 startActivity(intback);
                 finish();
+            }
+        });
+
+        question_rikaz_imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rikaz_guide.startLoadingDialog();
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        rikaz_guide.dismiss();
+                    }
+                },5000);
             }
         });
     }
