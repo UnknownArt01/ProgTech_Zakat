@@ -11,32 +11,43 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Zakat">
+
+        <activity android:name=".Perdagangan_RecyclerView">
+
+
+        </activity>
+        <activity android:name=".Perak_RecyclerView">
+
+        </activity>
+        <activity android:name=".Maal_RecyclerView"></activity>
+
         <activity android:name=".listinputzakatfitrah"></activity>
+        <activity android:name=".hitungzakatfitrahumum" />
+
         <activity android:name=".listinputzakatsimpanan" />
         <activity android:name=".listinputzakatrikaz" />
         <activity android:name=".listinputzakatprofesi" />
-        <activity android:name=".hitungzakatfitrahumum" />
         <activity android:name=".hitungzakatrikaz" />
         <activity android:name=".hitungzakatsimpanan" />
         <activity android:name=".hitungzakatprofesi" />
+
         <activity android:name=".zakat_maal_umum" />
         <activity android:name=".zakat_perak" />
         <activity android:name=".zakat_emas" />
         <activity android:name=".zakat_perdagangan" />
-        <activity android:name=".Maal_RecyclerView"/>
-        <activity android:name=".Perdagangan_RecyclerView"/>
-        <activity android:name=".Perak_RecyclerView"/>
-        <activity android:name=".Emas_RecyclerView"/>
-        <activity android:name=".MENU"/>
         <activity android:name=".SignUp" />
-        <activity android:name=".Login" />
-        <activity android:name=".SplashScreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".Login" >
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
+        <activity android:name=".Emas_RecyclerView" />
+
+        <activity android:name=".SplashScreen" ><intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
+        <activity android:name=".MENU"/>
     </application>
 
 </manifest>

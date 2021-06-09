@@ -14,6 +14,8 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import model.InputanZakatSimpanan;
 import model.Loading;
+import model.Rikaz_Guide;
+import model.Simpanan_Guide;
 
 public class hitungzakatsimpanan extends AppCompatActivity {
 
@@ -21,8 +23,9 @@ public class hitungzakatsimpanan extends AppCompatActivity {
     private Button button_simpanan;
     int saldoakhir, hasilll;
     double bunga;
-    private ImageView back_simpanan_imageView;
+    private ImageView back_simpanan_imageView, question_simpanan_imageView;
     private Loading loading = new Loading(hitungzakatsimpanan.this);
+    private Simpanan_Guide simpanan_guide= new Simpanan_Guide(hitungzakatsimpanan.this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +68,19 @@ public class hitungzakatsimpanan extends AppCompatActivity {
                 Intent intback = new Intent(getBaseContext(), listinputzakatsimpanan.class);
                 startActivity(intback);
                 finish();
+            }
+        });
+        question_simpanan_imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                simpanan_guide.startLoadingDialog();
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        simpanan_guide.dismiss();
+                    }
+                },5000);
             }
         });
     }
