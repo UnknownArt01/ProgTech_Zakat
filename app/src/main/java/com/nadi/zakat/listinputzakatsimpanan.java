@@ -29,6 +29,7 @@ public class listinputzakatsimpanan extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listinputzakatsimpanan);
+        getSupportActionBar().hide();
 
         initView();
         setupRecyclerView();
@@ -79,7 +80,7 @@ public class listinputzakatsimpanan extends AppCompatActivity {
         imageView_backs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intback = new Intent(getBaseContext(), tampilanawal.class);
+                Intent intback = new Intent(getBaseContext(), MENU.class);
                 startActivity(intback);
                 finish();
             }

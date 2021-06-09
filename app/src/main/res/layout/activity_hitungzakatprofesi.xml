@@ -4,39 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F482A9"
+    android:background="@drawable/background2"
     tools:context=".hitungzakatprofesi">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="252dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="32dp"
-        android:background="#FDFCFD"
-        android:backgroundTint="#F13B79"
-        android:text="   Hitung Zakat Profesi"
-        android:textColor="#F8F5F5"
-        android:textColorLink="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="116dp"
+        android:layout_marginTop="32dp"
         android:text="Penghasilan PerBulan:"
-        android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar13" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputpenghasilan"
@@ -61,7 +42,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Penghasilan Tambahan :"
-        android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textInputpenghasilan"
@@ -92,7 +72,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Cicilan dan Kebutuhan Pokok :"
-        android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textInputambah"
@@ -122,7 +101,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:backgroundTint="#E91E63"
+        android:background="@drawable/round_button"
         android:text="Hitung Zakat Profesi"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textInputcicilan"
@@ -135,7 +114,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="KETERANGAN :"
-        android:textColor="#F6F2F2"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/button_hit"
@@ -148,7 +126,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1. Jika tidak memiliki penghasilan "
-        android:textColor="#FBF7F7"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView25"
@@ -161,7 +138,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="perbulan atau penghasilan tambahan"
-        android:textColor="#F8F5F5"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView28"
@@ -174,7 +150,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="atau cicilan dan kebutuhan pokok"
-        android:textColor="#FFFCFC"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView29"
@@ -187,7 +162,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="maka tuliskan angka 0 pada kolom"
-        android:textColor="#F6F4F4"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView30"
@@ -201,7 +175,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="2.memasukkan angka dengan "
-        android:textColor="#F4F3F3"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView31"
@@ -214,13 +187,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="tidak menggunakan titik(.) dan koma(,)"
-        android:textColor="#FDFAFA"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView32"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView32"
         app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00B8D4"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Zakat Profesi"
+        app:titleMarginStart="80dp" />
+
+    <ImageView
+        android:id="@+id/back_profesi_imageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/abc_vector_test" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

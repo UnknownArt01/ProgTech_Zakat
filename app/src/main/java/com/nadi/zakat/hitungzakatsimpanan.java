@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -20,12 +21,15 @@ public class hitungzakatsimpanan extends AppCompatActivity {
     private Button button_simpanan;
     int saldoakhir, hasilll;
     double bunga;
+    private ImageView back_simpanan_imageView;
     private Loading loading = new Loading(hitungzakatsimpanan.this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hitungzakatsimpanan);
+
+        getSupportActionBar().hide();
 
         initView();
         setListener();
@@ -55,12 +59,21 @@ public class hitungzakatsimpanan extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Zakat Tabungan Berhasil Dihitung ", Toast.LENGTH_SHORT).show();
             }
         });
+        back_simpanan_imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intback = new Intent(getBaseContext(), listinputzakatsimpanan.class);
+                startActivity(intback);
+                finish();
+            }
+        });
     }
 
     private void initView() {
         textInputzakatsaldo = findViewById(R.id.textInputzakatsaldo);
         textInputbunga = findViewById(R.id.textInputbunga);
         button_simpanan = findViewById(R.id.button_simpanan);
+        back_simpanan_imageView = findViewById(R.id.back_simpanan_imageView);
     }
 
 

@@ -134,7 +134,7 @@
                 android:layout_width="150dp"
                 android:layout_height="125dp"
                 android:background="@drawable/tabungan"
-                app:layout_constraintBottom_toTopOf="@+id/textView59"
+                app:layout_constraintBottom_toTopOf="@+id/fitrah_imageButton"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/profesi_imageButton"
@@ -173,7 +173,9 @@
                 android:layout_marginBottom="100dp"
                 android:background="@drawable/temuan"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/tabungan_imageButton"
+                app:layout_constraintEnd_toStartOf="@+id/fitrah_imageButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/profesi_imageButton"
                 app:srcCompat="@drawable/stroke" />
@@ -200,6 +202,29 @@
                 app:layout_constraintEnd_toEndOf="@+id/tabungan_imageButton"
                 app:layout_constraintStart_toStartOf="@+id/tabungan_imageButton"
                 app:layout_constraintTop_toBottomOf="@+id/tabungan_imageButton" />
+
+            <ImageButton
+                android:id="@+id/fitrah_imageButton"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
+                android:background="@drawable/fitrah"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/temuan_imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/tabungan_imageButton"
+                app:srcCompat="@drawable/stroke" />
+
+            <TextView
+                android:id="@+id/textView62"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zakat FItrah"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/fitrah_imageButton"
+                app:layout_constraintStart_toStartOf="@+id/fitrah_imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/fitrah_imageButton" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

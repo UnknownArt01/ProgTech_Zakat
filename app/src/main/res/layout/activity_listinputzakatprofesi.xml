@@ -41,12 +41,11 @@
 
     <ImageView
         android:id="@+id/imageView_pr"
-        android:layout_width="62dp"
-        android:layout_height="52dp"
-        android:layout_marginBottom="3dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         app:layout_constraintBottom_toTopOf="@+id/recyclerview_recyclerview"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="?attr/actionModeCloseDrawable" />
+        app:srcCompat="@drawable/abc_vector_test" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

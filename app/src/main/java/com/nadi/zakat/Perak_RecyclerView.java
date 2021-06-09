@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -20,6 +21,7 @@ public class Perak_RecyclerView extends AppCompatActivity {
     private ArrayList<Perak> dataPerak;
     private Perak_RV_Adapter adapter;
     private FloatingActionButton perak_floatingActionButton;
+    private ImageView back_perak_rec_imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +56,14 @@ public class Perak_RecyclerView extends AppCompatActivity {
                 startActivityForResult(intent, 9966);
             }
         });
+        back_perak_rec_imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intback = new Intent(getBaseContext(), MENU.class);
+                startActivity(intback);
+                finish();
+            }
+        });
     }
 
     private void setupRecyclerView() {
@@ -67,6 +77,7 @@ public class Perak_RecyclerView extends AppCompatActivity {
         dataPerak = new ArrayList<Perak>();
         adapter = new Perak_RV_Adapter(dataPerak);
         perak_floatingActionButton = findViewById(R.id.perak_floatingActionButton);
+        back_perak_rec_imageView= findViewById(R.id.back_perak_rec_imageView);
     }
 
 }

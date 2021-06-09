@@ -29,6 +29,8 @@ public class listinputzakatrikaz extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listinputzakatrikaz);
+        getSupportActionBar().hide();
+
         initView();
         setupRecyclerView();
         addDummyData();
@@ -80,7 +82,7 @@ public class listinputzakatrikaz extends AppCompatActivity {
         imageView_backr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intback = new Intent(getBaseContext(), tampilanawal.class);
+                Intent intback = new Intent(getBaseContext(), MENU.class);
                 startActivity(intback);
                 finish();
             }

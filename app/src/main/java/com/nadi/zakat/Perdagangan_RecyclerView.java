@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -20,6 +21,8 @@ public class Perdagangan_RecyclerView extends AppCompatActivity {
     private ArrayList<Perdagangan> dataPerdagangan;
     private Perdagangan_RV_Adapter adapter;
     private FloatingActionButton perdagangan_floatingActionButton;
+    private ImageView back_perdagangan_rec_imageView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +55,14 @@ public class Perdagangan_RecyclerView extends AppCompatActivity {
                 startActivityForResult(intent,6699);
             }
         });
+        back_perdagangan_rec_imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intback = new Intent(getBaseContext(), MENU.class);
+                startActivity(intback);
+                finish();
+            }
+        });
     }
 
     private void setupRecyclerView() {
@@ -65,5 +76,6 @@ public class Perdagangan_RecyclerView extends AppCompatActivity {
         dataPerdagangan = new ArrayList<Perdagangan>();
         adapter = new Perdagangan_RV_Adapter(dataPerdagangan);
         perdagangan_floatingActionButton = findViewById(R.id.perdagangan_floatingActionButton);
+        back_perdagangan_rec_imageView = findViewById(R.id.back_perdagangan_rec_imageView);
     }
 }

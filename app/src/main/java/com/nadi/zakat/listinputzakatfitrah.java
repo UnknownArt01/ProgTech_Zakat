@@ -30,6 +30,8 @@ public class listinputzakatfitrah extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listinputzakatfitrah);
+        getSupportActionBar().hide();
+
         initView();
         setupRecyclerView();
         addDummyData();
@@ -78,7 +80,7 @@ public class listinputzakatfitrah extends AppCompatActivity {
         imageView_ft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intback = new Intent(getBaseContext(), tampilanawal.class);
+                Intent intback = new Intent(getBaseContext(), MENU.class);
                 startActivity(intback);
                 finish();
             }

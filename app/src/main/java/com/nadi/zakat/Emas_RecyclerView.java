@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -21,6 +22,7 @@ public class Emas_RecyclerView extends AppCompatActivity {
     private FloatingActionButton emas_floatingActionButton;
     private ArrayList<Emas> dataEmas;
     private Emas_RV_Adapter adapter;
+    private ImageView back_emas_rec_imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +33,7 @@ public class Emas_RecyclerView extends AppCompatActivity {
 
         emasInitView();
         setupRecyclerView();
-        addDummyData();
+
         clickListener();
     }
 
@@ -59,6 +61,14 @@ public class Emas_RecyclerView extends AppCompatActivity {
                 startActivityForResult(intent, 5587);
             }
         });
+        back_emas_rec_imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intback = new Intent(getBaseContext(), MENU.class);
+                startActivity(intback);
+                finish();
+            }
+        });
     }
 
     private void addDummyData() {
@@ -77,5 +87,6 @@ public class Emas_RecyclerView extends AppCompatActivity {
         emas_floatingActionButton = findViewById(R.id.emas_floatingActionButton);
         dataEmas = new ArrayList<Emas>();
         adapter = new Emas_RV_Adapter(dataEmas);
+        back_emas_rec_imageView = findViewById(R.id.back_emas_rec_imageView);
     }
 }
