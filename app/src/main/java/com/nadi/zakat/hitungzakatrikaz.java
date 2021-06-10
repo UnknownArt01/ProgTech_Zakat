@@ -88,6 +88,7 @@ public class hitungzakatrikaz extends AppCompatActivity {
         textInputhargabarangtemuan = findViewById(R.id.textInputhargabarangtemuan);
         button_hitung_Rikaz = findViewById(R.id.button_hitung_Rikaz);
         back_temuan_imageView = findViewById(R.id.back_temuan_imageView);
+        question_rikaz_imageView = findViewById(R.id.question_rikaz_imageView);
     }
 
 }

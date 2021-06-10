@@ -90,6 +90,7 @@ public class hitungzakatsimpanan extends AppCompatActivity {
         textInputbunga = findViewById(R.id.textInputbunga);
         button_simpanan = findViewById(R.id.button_simpanan);
         back_simpanan_imageView = findViewById(R.id.back_simpanan_imageView);
+        question_simpanan_imageView = findViewById(R.id.question_simpanan_imageView);
     }
 
 

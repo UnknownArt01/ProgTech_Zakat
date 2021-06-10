@@ -102,6 +102,7 @@ public class hitungzakatprofesi extends AppCompatActivity {
         textInputcicilan = findViewById(R.id.textInputcicilan);
         button_hit = findViewById(R.id.button_hit);
         back_profesi_imageView = findViewById(R.id.back_profesi_imageView);
+        question_profesi_imageView = findViewById(R.id.question_profesi_imageView);
         //  textViewhasil = findViewById(R.id.textViewhasil);
         // card_hasil = findViewById(R.id.card_hasil);
 
